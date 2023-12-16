@@ -1,0 +1,27 @@
+node_modules
+*.mp4
+
+
+
+
+
+# 例子：忽略所有 .log 文件，但不忽略 error.log
+# *.log
+# !error.log
+
+# 例子：忽略一个特定的目录
+# mydirectory/
+
+# 忽略操作系统生成的文件
+# .DS_Store
+
+# 忽略临时文件
+# *~
+
+# 忽略编译生成的文件
+# *.o
+# *.out
+
+# 在全局忽略文件中添加规则，然后执行以下命令生效
+# ~/.gitignore_global 路径
+# git config --global core.excludesfile ~/.gitignore_global

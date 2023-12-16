@@ -1,0 +1,77 @@
+import insectTeam from '../assets/thumbs/insect_team.jpg'
+/* 
+拿时要解构
+*/
+// export {hots }
+export const hots = [
+    {
+        rank: 3,
+        poster: insectTeam,
+        desc: '已完结',
+        type: '动漫',
+        name: '风吹半夏',
+        publishYear: '2022',
+        tags: '中国大陆剧情,爱情,国产,中国大陆剧情,爱情,国产,',
+        actors: '赵丽颖,欧豪,李光洁,刘威,柯蓝,赵丽颖,欧豪,李光洁,刘威,柯蓝,',
+    },
+    {
+        rank: 4,
+        poster: insectTeam,
+        desc: '40集全',
+        type: '电视剧',
+        name: '爱的二八定律',
+        publishYear: '2022',
+        tags: '中国大陆剧情,爱情,情,国产,中国大陆剧情,爱情,情,国产',
+        actors: '杨幂,许凯,李泽锋,汤晶媚,王子璇,杨幂,许凯,李泽锋,汤晶媚,王子璇,',
+    },
+    {
+        rank: 5,
+        poster: insectTeam,
+        desc: 'HD国语',
+        type: '电影',
+        name: '长风渡：吧啦吧啦',
+        publishYear: '2023',
+        tags: '大陆国产,古装,情,普通话,大陆国产,古装,情,普通话,',
+        actors: '白敬亭,宋轶,刘学义,张昊唯,张睿,白敬亭,宋轶,刘学义,张昊唯,张睿',
+    },
+    {
+        rank: 1,
+        poster: insectTeam,
+        desc: '40集全',
+        type: '电视剧',
+        name: '卿卿日常',
+        publishYear: '2022',
+        tags: '中国大陆剧情、爱情、古装、喜剧、中国大陆剧情、爱情、古装、喜剧、中国大陆剧情、爱情、古装、喜剧、',
+        actors: '白敬亭,田曦薇,陈小纭,刘冠麟,刘令姿,白敬亭,田曦薇,陈小纭,刘冠麟,刘令姿,张',
+    },
+    {
+        rank: 2,
+        poster: insectTeam,
+        desc: '36集全',
+        type: '电视剧',
+        name: '点燃我，温暖你',
+        publishYear: '2022',
+        tags: '中国大陆剧情,爱情,都市,中国大陆剧情,爱情,都市',
+        actors: '陈飞宇,张婧仪,赵志伟,曾可妮,崔雨鑫,陈飞宇,张婧仪,赵志伟,曾可妮,崔雨鑫',
+    },
+    {
+        rank: 7,
+        poster: insectTeam,
+        desc: 'HD国语',
+        type: '电影',
+        name: '卿卿日常',
+        publishYear: '2022',
+        tags: '中国大陆剧情、爱情、古装、喜剧、中国大陆剧情、爱情、古装、喜剧、中国大陆剧情、爱情、古装、喜剧、',
+        actors: '唐大大、堂大王、大大唐、大唐大、唐大大、堂大王、大大唐、大唐大、唐大大、堂大王、大大唐、大唐大、',
+    },
+    {
+        rank: 6,
+        poster: insectTeam,
+        desc: '已完结',
+        type: '动漫',
+        name: '卿卿日常',
+        publishYear: '2022',
+        tags: '中国大陆剧情、爱情、古装、喜剧、中国大陆剧情、爱情、古装、喜剧、中国大陆剧情、爱情、古装、喜剧、',
+        actors: '唐大大、堂大王、大大唐、大唐大、唐大大、堂大王、大大唐、大唐大、唐大大、堂大王、大大唐、大唐大、',
+    },
+]
