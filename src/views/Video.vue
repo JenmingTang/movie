@@ -30,6 +30,7 @@
             <br>
             <br>
             <br>
+            <br>
             <video-player :movie="id"></video-player>
         </template>
     </base-layout>

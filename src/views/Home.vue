@@ -1,4 +1,7 @@
 <template>
+    <ElDivider>Jenming</ElDivider>
+        <div class="jenming"></div>
+    <ElDivider>Jenming</ElDivider>
     <base-layout>
         <template #header>
             <br>
@@ -91,6 +94,7 @@ import rank from '../assets/imgs/rank.png'
 import streams from '../data/stream'
 import carousels from '../data/carousel'
 import types from '../data/types'
+import { ElDivider } from 'element-plus'
 
 </script>
 
@@ -101,5 +105,17 @@ import types from '../data/types'
 
 .icon-img {
     width: 36px;
+}
+.jenming {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition: all 0.5s;
+}
+
+.jenming:hover {
+    background-color: black;
+    width: 200px;
+    height: 200px;
 }
 </style>

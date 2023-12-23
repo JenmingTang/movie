@@ -1,8 +1,8 @@
 <template>
-    <el-button @click="set">set</el-button>
+    <!-- <el-button @click="set">set</el-button>
     <el-button @click="get">get</el-button>
     <el-button @click="remove">remove</el-button>
-    <el-button @click="clear">clear</el-button>
+    <el-button @click="clear">clear</el-button> -->
     <hr>
     <base-layout>
         <el-row justify="center">
@@ -188,7 +188,7 @@ const login = async () => {
 null 不存数据，一分钟
 key 不要用户名，因为只维护一个用户，维护多个未实现
 */
-    setWithExpiry('user', user.value.username, MINUTE)
+    setWithExpiry('user', user.value.username, MINUTE * 30)
 
     ElNotification({
         type: 'success',

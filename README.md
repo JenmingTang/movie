@@ -3,6 +3,7 @@
 This template should help get you started developing with Vue 3 in Vite.
 
 ## By Jenming
+>用时看下 .gitignore 文件
 - 密码哈希加盐加密
 - 离线登录状态过期
 - 页面

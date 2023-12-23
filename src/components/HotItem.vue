@@ -1,7 +1,7 @@
 <template>
     <el-card shadow="always">
 
-        <el-row >
+        <el-row>
             <el-col :span="8">
 
                 <div class="container" @click="toVideo">
@@ -194,6 +194,7 @@ const dynamicClip = rank => {
     border-radius: 16px;
     transform: rotateZ(45deg);
 }
+
 .container {
     position: relative;
     display: inline-block;
@@ -228,8 +229,8 @@ const dynamicClip = rank => {
     transition: opacity 0.5s;
 }
 
+
 .container:hover .icon {
     opacity: 1;
     cursor: pointer;
-}
-</style>
+}</style>
