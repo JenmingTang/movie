@@ -3,17 +3,14 @@
 
         <el-row>
             <el-col :span="8">
-
                 <div class="container" @click="toVideo">
                     <el-image :src="item.poster">
                     </el-image>
-
                     <div class="text-overlay">{{ item.desc }}</div>
                     <div class="text-overlay-rank">{{ item.rank }}</div>
                     <div class="overlay-clip-path" :style="dynamicClip(item.rank)"></div>
                     <div class="overlay-clip-path-border" :style="dynamicClip(item.rank)"></div>
                     <div class="overlay"></div>
-
                     <div class="icon"></div>
                 </div>
             </el-col>
@@ -100,41 +97,6 @@ const dynamicClip = rank => {
     margin-bottom: 5px;
 }
 
-/* 
-
-  max-width: 100%;
-  图片默认大小缩放比
-
-  图片自定义大小缩放比,改width
-
-  max-width: 100%;
-  height: auto;
-  width: 100px;
-  
-                        <!-- 
-                            Intrinsic size:	270 × 378 px
-                            Intrinsic aspect ratio:	5∶7
-                        -->
-                        <!-- <img :src="myName" alt=""> -->
-  */
-
-.truncate {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px;
-    /* 根据需要设置最大宽度 */
-}
-
-/* 
-  控制 el-row 的width 即可
-  */
-.img {
-    max-width: 100%;
-    height: auto;
-    width: 150px;
-}
-
 .text-overlay {
     position: absolute;
     bottom: 0;
@@ -183,18 +145,6 @@ const dynamicClip = rank => {
     clip-path: polygon(0% 0%, 0% 100%, 3% 100%, 3% 3%, 97% 3%, 97% 97%, 3% 97%, 0 100%, 100% 100%, 100% 0%);
 }
 
-.module-item-top::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    background: #9e9e9e;
-    height: 100px;
-    width: 100px;
-    border-radius: 16px;
-    transform: rotateZ(45deg);
-}
-
 .container {
     position: relative;
     display: inline-block;
@@ -233,4 +183,5 @@ const dynamicClip = rank => {
 .container:hover .icon {
     opacity: 1;
     cursor: pointer;
-}</style>
+}
+</style>

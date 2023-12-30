@@ -188,7 +188,7 @@ const login = async () => {
 null 不存数据，一分钟
 key 不要用户名，因为只维护一个用户，维护多个未实现
 */
-    setWithExpiry('user', user.value.username, MINUTE * 30)
+    setWithExpiry('user', user.value.username, MINUTE * 10)
 
     ElNotification({
         type: 'success',

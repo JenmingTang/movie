@@ -7,7 +7,6 @@
             </div>
         </template>
         <template v-for="item in sortedData" :key="item.rank">
-
             <div class="container" style="width: 100%;" @click="toVideo(item.name)">
                 <div style="display: flex;align-items: center; margin-bottom: 10px;">
                     <div style="flex: 2;" :style="getDynamicStyle(item.rank)">{{ item.rank }}</div>
@@ -95,7 +94,7 @@ const getDynamicStyle = rank => {
     }
 }
 
-const toVideo = name => 
+const toVideo = name =>
     router.push({ name: 'video', params: { id: name } })
 
 </script>

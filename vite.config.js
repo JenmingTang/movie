@@ -13,5 +13,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/movie/'
+  /* 
+  /work ok
+  */
+  // base: '/work/class-cs-3/202313143500334/'
+  // base: '/'
 })

@@ -30,6 +30,8 @@ import { useRouter, useRoute } from "vue-router";
 const searchText = ref('')
 
 function search() {
+    if (searchText.value === '')
+        return
     /* 
     
     router.push({

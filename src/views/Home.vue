@@ -1,7 +1,7 @@
 <template>
-    <ElDivider>Jenming</ElDivider>
+    <!-- <ElDivider>Jenming</ElDivider>
         <div class="jenming"></div>
-    <ElDivider>Jenming</ElDivider>
+    <ElDivider>Jenming</ElDivider> -->
     <base-layout>
         <template #header>
             <br>

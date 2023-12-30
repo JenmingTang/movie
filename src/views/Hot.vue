@@ -12,8 +12,8 @@
     <el-row>
         <template v-for="(item, index) in sortedData" :key="item.rank">
             
-            <el-col :span="8" :offset="0">
-                <div style="margin: 10px;">
+            <el-col :span="12" :offset="0">
+                <div style="margin: 8px;">
 
                     <!-- {{ item }} -->
                     <HotItem :data="item" />
