@@ -144,6 +144,10 @@ const register = async () => {
         // localStorage.setItem('users', JSON.stringify([{...user.value}]))
     }
 
+
+    /* 
+    注册成功直接登录进去，不用用户再一次登录
+    */
     ElNotification({
         type: 'success',
         title: '欢迎成为会员！',
@@ -151,31 +155,7 @@ const register = async () => {
         showClose: false,
         // position: 'top-right',
     })
-
-    /* 
-    注册成功直接登录进去，不用用户再一次登录
-    */
-    // router.push('/login')
-
-    /* 
-    登录成功
-重置、设置状态
-null 不存数据，一分钟
-key 不要用户名，因为只维护一个用户，维护多个未实现
-*/
     setWithExpiry('user', user.value.username, MINUTE * 10)
-
-    ElNotification({
-        type: 'success',
-        title: '欢迎回来！',
-        message: user.value.username,
-        showClose: false,
-        // position: 'top-right',
-    })
-    /* 
-    浏览器历史记录是由浏览器自己管理的，并且通常不允许JavaScript从中删除或清除所有记录。
-    */
-
     reset()
     router.replace('/')
 }
