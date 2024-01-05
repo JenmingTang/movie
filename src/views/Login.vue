@@ -43,7 +43,7 @@
                             </el-row>
                         </el-form-item>
                         <el-form-item style="float: right;">
-                            <el-text>还没有账号？</el-text>
+                            <el-text>还没有账号？🤔</el-text>
                             <router-link to="/register">
                                 <el-link :underline="false" type="success">立即注册</el-link>
                             </router-link>
@@ -198,8 +198,6 @@ key 不要用户名，因为只维护一个用户，维护多个未实现
         // position: 'top-right',
     })
     reset()
-
-
     /* 
     浏览器历史记录是由浏览器自己管理的，并且通常不允许JavaScript从中删除或清除所有记录。
     */

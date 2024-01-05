@@ -52,7 +52,7 @@
                             </el-row>
                         </el-form-item>
                         <el-form-item style="float: right;">
-                            <el-text>已有账号？</el-text>
+                            <el-text>已有账号？🤔</el-text>
                             <router-link to="/login">
                                 <el-link :underline="false" type="primary">立即登录</el-link>
                             </router-link>
@@ -75,6 +75,7 @@ import { User, Lock, Message } from '@element-plus/icons-vue'
 import BaseLayout from '../components/BaseLayout.vue';
 import Logo from '../components/Logo.vue'
 import { ElMessage, ElNotification } from 'element-plus'
+import { setWithExpiry, getWithExpiry, MINUTE } from "../utilities/time";
 import { SHA256 } from "../utilities/encryption";
 import { useRouter } from "vue-router";
 const router = useRouter()
@@ -151,9 +152,32 @@ const register = async () => {
         // position: 'top-right',
     })
 
-    router.push('/login')
+    /* 
+    注册成功直接登录进去，不用用户再一次登录
+    */
+    // router.push('/login')
+
+    /* 
+    登录成功
+重置、设置状态
+null 不存数据，一分钟
+key 不要用户名，因为只维护一个用户，维护多个未实现
+*/
+    setWithExpiry('user', user.value.username, MINUTE * 10)
+
+    ElNotification({
+        type: 'success',
+        title: '欢迎回来！',
+        message: user.value.username,
+        showClose: false,
+        // position: 'top-right',
+    })
+    /* 
+    浏览器历史记录是由浏览器自己管理的，并且通常不允许JavaScript从中删除或清除所有记录。
+    */
+
     reset()
-    
+    router.replace('/')
 }
 const reset = () => {
 

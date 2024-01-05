@@ -17,12 +17,6 @@ const config = ref({
 
 
 onMounted(() => {
-  
-  ElMessage({
-      message: '欢迎使用电影搜索系统',
-      type: 'success',
-      showClose: false,
-    })
   // 检查本地存储是否已经显示过弹窗
   const hasShownModal = localStorage.getItem('hasShownModal');
 

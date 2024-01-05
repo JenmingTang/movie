@@ -16,6 +16,6 @@ export default defineConfig({
   /* 
   /work ok
   */
-  // base: '/work/class-cs-3/202313143500334/'
+  base: '/work/class-cs-3/202313143500334/'
   // base: '/'
 })
