@@ -1,11 +1,19 @@
 <template>
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
+    <!-- 
+        :default-active="activeIndex"
+     -->
+    <el-menu router class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
         <el-sub-menu index="0">
             <template #title><el-icon>
                     <User />
                 </el-icon>{{ username }}</template>
-            <el-menu-item index="2-1">
-                <!-- <el-link :underline="false" type="primary">注销登录</el-link> -->
+            <!-- 
+                    启用路由后，不添加 index='2-1'
+                    index=''不会跳转 
+                    加了  index="" menu会一直亮，不加一直暗？？
+                    我需求是一直暗，不管了
+                 -->
+            <el-menu-item>
 
 
                 <el-link :icon="Switch" type="warning" @click="logout">注销登录
@@ -15,12 +23,11 @@
                 </el-link>
 
             </el-menu-item>
-            <el-menu-item index="2-2">
-                <router-link to="/register">
-                    <el-link :icon="TopRight" type="success">去注册新用户
+            <el-menu-item index="/register">
+                <el-link :icon="TopRight" type="success">去注册新用户
 
-                    </el-link>
-                </router-link></el-menu-item>
+                </el-link>
+            </el-menu-item>
             <!-- <el-sub-menu index="2-4">
         <template #title>item four</template>
         <el-menu-item index="2-4-1">item one</el-menu-item>
@@ -38,13 +45,14 @@ import { UserFilled, InfoFilled, User, Plus, TopRight, Switch } from "@element-p
 
 
 import { ElMessage, ElMessageBox } from 'element-plus'
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter()
 const handleSelect = (item, index) => {
     console.log(item, index)
 }
 
-const activeIndex = ''
+const activeIndex = ref('')
 
 const username =
     JSON.parse(localStorage.getItem('user')).value
