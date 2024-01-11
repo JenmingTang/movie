@@ -195,6 +195,7 @@ key 不要用户名，因为只维护一个用户，维护多个未实现
         title: '欢迎回来！',
         message: user.value.username,
         showClose: false,
+        duration: 2000
         // position: 'top-right',
     })
     reset()

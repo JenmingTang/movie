@@ -11,7 +11,7 @@
             </el-col>
         </el-row>
         <el-footer>
-            <base-footer :designer="'chenzhtbb 2023'" />
+            <base-footer :designer="'chenzhtbb & Jenming 2023'" />
         </el-footer>
     </el-container>
 </template>
